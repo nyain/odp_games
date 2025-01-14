@@ -38,4 +38,4 @@ def b():
     print(f"{pair[0]} {pair[1]}")
 
 
-##Misal
+##contoh
