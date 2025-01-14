@@ -1,15 +1,28 @@
-
 def c():
     """
-    Buat program untuk memeriksa apakah sebuah angka merupakan bilangan Armstrong.
-    Bilangan Armstrong adalah angka yang sama dengan jumlah pangkat 𝑛-nya, di mana 𝑛 adalah jumlah digit angka tersebut.
+    Periksa apakah sebuah angka merupakan bilangan Armstrong.
 
-    MASUKAN
-    n = 153
-
-    KELUARAN
-    153 adalah bilangan Armstrong
+    Keluaran:
+    None: Cetak hasil apakah angka adalah bilangan Armstrong atau bukan.
     """
+    # Ambil input dari pengguna
+    num = int(input("Enter a number: "))
 
-    # write the code solution here
-    print("Mohon maaf, permainan C belum tersedia!")
+    # Hitung jumlah digit
+    num_digits = len(str(num))
+
+    # Inisialisasi sum
+    total = 0
+
+    # Menjumlahkan setiap digit yang dipangkatkan sesuai jumlah digit
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        total += digit ** num_digits  # Angka dipangkatkan sesuai jumlah digit
+        temp //= 10  # Menghapus digit terakhir
+
+    # Menampilkan hasil
+    if num == total:
+        print(num, "is an Armstrong number")
+    else:
+        print(num, "is not an Armstrong number")
