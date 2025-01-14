@@ -36,3 +36,6 @@ def b():
 
     # Menampilkan pasangan dengan format sesuai
     print(f"{pair[0]} {pair[1]}")
+
+
+##Misal
